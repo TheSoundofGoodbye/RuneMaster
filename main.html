@@ -1,13 +1,13 @@
 <link href="css.css" rel="stylesheet">
 
 <h1>Test page</h1>
-<div class="runeArray">
+<div class="runeContainer">
 </div>
-<div class="wordArray">
+<div class="wordContainer">
     <div class="wordPopup">
         <div id="wordPopup" class="invisible">Test message</div>
     </div>
-    <table>
+    <table id="runeTable">
         <tr>
             <th>Name</th>
             <th>Rune1</th>
@@ -18,7 +18,7 @@
             <th>Rune6</th>
             <th>Base</th>
         </tr>
-        <tr>
+        <tr class="runeComb" id="runeComb0">
             <td>MissingNo</td>
             <td><img src="img/hylian_char_A.png" class="runeImgSmall0 runeImgSmall" /></td>
             <td><img src="img/hylian_char_A.png" class="runeImgSmall0 runeImgSmall" /></td>
@@ -27,71 +27,20 @@
             <td><img src="img/hylian_char_A.png" class="runeImgSmall0 runeImgSmall" /></td>
             <td><img src="img/hylian_char_A.png" class="runeImgSmall0 runeImgSmall" /></td>
         </tr>
-        <tr>
+        <tr class="runeComb" id="runeComb1">
             <td>Stealth</td>
-            <td>runeImg3</td>
-            <td>runeImg4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>runeImg7</td>
+            <td>runeImg5</td>
         </tr>
-        <tr>
+        <tr class="runeComb" id="runeComb2">
             <td>Enigma</td>
-            <td>runeImg1</td>
-            <td>runeImg2</td>
-            <td>runeImg4</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>runeImg31</td>
+            <td>runeImg6</td>
+            <td>runeImg30</td>
         </tr>
-
     </table>
-
-    <div class="word" id="word0">
-        <h3 class="wordTitle" id="wordTitle0">MissingNo</h3>
-        <div class="wordDescContainer">
-        <b class="wordDesc hidden" id="wordDesc0">
-        +10 To All SKills<br>
-        +100% Faster Run/Walk<br>
-        +1 To Teleport<br>
-        50% Faster Cast Rate<br>
-    </b>
-    </div>
-    </div>
-    <div class="word" id="word1">
-        <h3 class="wordTitle" id="wordTitle1">Stealth</h3>
-        <div class="wordDescContainer">
-        <b class="wordDesc hidden" id="wordDesc1">
-        Magic Damage Reduced By 3<br>
-        +6 To Dexterity<br>
-        +15 To Maximum Stamina<br>
-        Poison Resist +30%<br>
-        Regenerate Mana 15%<br>
-        25% Faster Run/Walk<br>
-        25% Faster Cast Rate<br>
-        25% Faster Hit Recovery<br>
-        </b>
-    </div>
-    </div>
-    <div class="word" id="word2">
-        <h3 class="wordTitle" id="wordTitle2">Enigma</h3>
-        <div class="wordDescContainer">
-        <b class="wordDesc hidden" id="wordDesc2">
-        +2 To All Skills<br>
-        +45% Faster Run/Walk<br>
-        +1 To Teleport<br>
-        +750-775 Defense<br>
-        + (0.75 Per Character Level) +0-74 To Strength (Based On Character Level)<br>
-        Increase Maximum Life 5%<br>
-        Damage Reduced By 8%<br>
-        +14 Life After Each Kill<br>
-        15% Damage Taken Goes To Mana<br>
-        + (1 Per Character Level) +1-99% Better Chance of Getting Magic Items (Based On Character Level)<br>
-        </b>
-        </div>
+    <div id="wordDetail">
     </div>
 </div>
 
 <script src="mainscript.js"></script>
-<script src="runedata.js"></script>
