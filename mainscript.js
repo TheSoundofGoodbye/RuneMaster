@@ -1,3 +1,17 @@
+//Make clickable Rune Array
+const runeContainer = document.querySelector(".runeArray");
+let runeDiv = '';
+for (let i = 0; i < 34; i++) {
+  runeDiv += 
+  `
+  <div class="rune">
+    <input type="checkbox" id="rune${i}" class="runeBox" />
+    <img src="img/rune${i}.png" id="runeImg${i}" class="runeImg" />
+   </div>
+   `;
+}
+runeContainer.innerHTML = runeDiv;
+
 const runeImg = document.querySelectorAll(".runeImg");
 const runeBox = document.querySelectorAll("input.runeBox");
 const word = document.querySelectorAll(".word");
@@ -12,32 +26,14 @@ runeImg.forEach(function(item) {
   });
 });
 
-function runewordShow(){
-  //stealth
-  if(runeBox[3].checked && runeBox[4].checked){
-    word[1].classList.remove("hidden");
-  } else {
-    word[1].classList.add("hidden");
-  }
-  //enigma
-  if(runeBox[1].checked && runeBox[2].checked && runeBox[4].checked){
-    word[2].classList.remove("hidden");
-  } else {
-    word[2].classList.add("hidden");
-  }
-}
-
 function runeHighlight(){
-  const runeArray = [];
-  for(var i = 0; i < runeBox.length; i++){
-    runeArray.push(document.querySelectorAll('.runeImgSmall'+i));
+  const runes = [];
+  for(let i = 0; i < runeBox.length; i++){
+    runes.push(document.querySelectorAll('.runeImgSmall'+i));
   }
-
-  console.log(runeArray);
-
-  for (var i = 0; i < 6; i++) { //the number of runeslot = 6
-    for (var j = 0; j < runeBox.length; j++) { //the number of runes
-      const runeC = runeArray[j][i];
+  for (let i = 0; i < 6; i++) { //the number of runeslot = 6
+    for (let j = 0; j < runeBox.length; j++) { //the number of runes
+      const runeC = runes[j][i];
       if (runeC == null) {
         continue;
         } else {
@@ -51,8 +47,6 @@ function runeHighlight(){
   }
 }
 
-runewordShow();
-document.addEventListener("click",runewordShow);
 document.addEventListener("click",runeHighlight);
 
 const wordTitle = document.querySelectorAll(".wordTitle");
