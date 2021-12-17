@@ -12,6 +12,9 @@ for (let i = 1; i < 34; i++) {
 }
 runeContainer.innerHTML = runeDiv;
 
+//Rune Array Scroll script
+
+
 //Rune table
 const text = document.querySelectorAll("td");
 text.forEach(item => {
