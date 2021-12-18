@@ -13,6 +13,29 @@ for (let i = 1; i < 34; i++) {
 runeContainer.innerHTML = runeDiv;
 
 //Rune Array Scroll script
+const runeHeight = runeContainer.scrollHeight;
+let scrollBefore = window.scrollY;
+let scrollBeforeRune = window.scrollY;
+
+scrollCheck = function(){
+  let scrollAfter = window.scrollY;
+  if(scrollBefore > scrollAfter ){
+    runeContainer.classList.remove('vanish');
+    console.log('show');
+    scrollBeforeRune = scrollAfter;
+  };
+  scrollBefore = scrollAfter;
+  
+  
+  if (scrollAfter - scrollBeforeRune > runeHeight ){
+    runeContainer.classList.add('vanish');
+  };
+};
+
+document.addEventListener("scroll", scrollCheck);
+
+
+
 
 
 //Rune table
