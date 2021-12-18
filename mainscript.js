@@ -21,12 +21,9 @@ scrollCheck = function(){
   let scrollAfter = window.scrollY;
   if(scrollBefore > scrollAfter ){
     runeContainer.classList.remove('vanish');
-    console.log('show');
     scrollBeforeRune = scrollAfter;
   };
-  scrollBefore = scrollAfter;
-  
-  
+  scrollBefore = scrollAfter; 
   if (scrollAfter - scrollBeforeRune > runeHeight ){
     runeContainer.classList.add('vanish');
   };
