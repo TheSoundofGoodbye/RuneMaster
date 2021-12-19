@@ -16,7 +16,6 @@ runeContainer.innerHTML = runeDiv;
 const runeHeight = runeContainer.scrollHeight;
 let scrollBefore = window.scrollY;
 let scrollBeforeRune = window.scrollY;
-
 scrollCheck = function(){
   let scrollAfter = window.scrollY;
   if(scrollBefore > scrollAfter ){
@@ -28,8 +27,16 @@ scrollCheck = function(){
     runeContainer.classList.add('vanish');
   };
 };
-
 document.addEventListener("scroll", scrollCheck);
+
+//Resize react 
+const wordContainer = document.getElementById("wordContainer");
+resizeWindow = function(){
+  let runeHeightVar = runeContainer.scrollHeight;
+  wordContainer.style.top = runeHeightVar + 50;
+};
+window.addEventListener("resize", resizeWindow)
+resizeWindow();
 
 
 
@@ -1698,7 +1705,7 @@ runewordDetail.set('word0',`
 
 let wordDiv = '';
 
-for (let i = 0; i < 81; i++) {
+for (let i = 0; i < 83; i++) {
   wordDiv += runewordDetail.get(`word${i}`);
 }
 wordDetail.innerHTML = wordDiv;
@@ -2230,16 +2237,24 @@ function runeHighlight(){
 
 document.addEventListener("click",runeHighlight);
 
-const wordTitle = document.querySelectorAll(".wordTitle");
+//Runeword Description Popup on Cursor (or runeword name)
+const runeComb = document.querySelectorAll(".runeComb");
 const wordDesc = document.querySelectorAll(".wordDesc");
 const wordPopup = document.querySelector("#wordPopup");
 
-wordTitle.forEach(function(item){
-  item.addEventListener('mouseover', function(){
+runeComb.forEach(function(item){
+  let runeName = item.querySelector("th");
+  runeName.addEventListener('mouseover', function(){
     const r = /\d+/;
-    const num = item.id.match(r)[0];  
-    wordPopup.innerHTML = wordDesc[num].innerHTML;
+    const num = item.id.match(r)[0];
+    let description = wordDesc[num].innerHTML.replace(/(?:\r\n|\r|\n)/g, '<br>');  
+    description.
+    wordPopup.innerHTML = description;
     wordPopup.classList.remove("invisible");
+    let offsetTop = this.offsetTop;
+    let offsetLeft = this.offsetLeft;
+    wordPopup.style.top = offsetTop;
+    wordPopup.style.left = offsetLeft + 150;
   })
   item.addEventListener('mouseout',function(){
     const r = /\d+/;
