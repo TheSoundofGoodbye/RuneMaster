@@ -1,3 +1,6 @@
+//Variable initialization
+const runeComb = document.querySelectorAll(".runeComb");
+
 //Clickable Rune Array
 const runeContainer = document.querySelector(".runeContainer");
 let runeDiv = '';
@@ -37,10 +40,6 @@ resizeWindow = function(){
 };
 window.addEventListener("resize", resizeWindow)
 resizeWindow();
-
-
-
-
 
 //Rune table
 const text = document.querySelectorAll("td");
@@ -1710,7 +1709,7 @@ for (let i = 0; i < 83; i++) {
 }
 wordDetail.innerHTML = wordDiv;
 
-//Click Script
+//Rune click checkbox ccript
 const runeImg = document.querySelectorAll(".runeImg");
 const runeBox = document.querySelectorAll("input.runeBox");
 const word = document.querySelectorAll(".word");
@@ -1733,483 +1732,823 @@ function runewordShow() {
   //Leaf (TirRal)
   if (runeBox[3].checked && runeBox[8].checked) {
     word[1].classList.remove("hidden");
+    runeComb[1].classList.remove("incomplete");
+    runeComb[1].classList.add("complete");
   } else {
     word[1].classList.add("hidden");
+    runeComb[1].classList.remove("complete");
+    runeComb[1].classList.add("incomplete");
   }
   //Lore (OrtSol)
   if (runeBox[9].checked && runeBox[12].checked) {
     word[2].classList.remove("hidden");
+    runeComb[2].classList.remove("incomplete");
+    runeComb[2].classList.add("complete");
   } else {
     word[2].classList.add("hidden");
+    runeComb[2].classList.remove("complete");
+    runeComb[2].classList.add("incomplete");
   }
   //Nadir (NefTir)
   if (runeBox[4].checked && runeBox[3].checked) {
     word[3].classList.remove("hidden");
+    runeComb[3].classList.remove("incomplete");
+    runeComb[3].classList.add("complete");
   } else {
     word[3].classList.add("hidden");
+    runeComb[3].classList.remove("complete");
+    runeComb[3].classList.add("incomplete");
   }
   //Rhyme (ShaelEth)
   if (runeBox[13].checked && runeBox[5].checked) {
     word[4].classList.remove("hidden");
+    runeComb[4].classList.remove("incomplete");
+    runeComb[4].classList.add("complete");
   } else {
     word[4].classList.add("hidden");
+    runeComb[4].classList.remove("complete");
+    runeComb[4].classList.add("incomplete");
   }
   //Smoke (NefLum)
   if (runeBox[4].checked && runeBox[17].checked) {
     word[5].classList.remove("hidden");
+    runeComb[5].classList.remove("incomplete");
+    runeComb[5].classList.add("complete");
   } else {
     word[5].classList.add("hidden");
+    runeComb[5].classList.remove("complete");
+    runeComb[5].classList.add("incomplete");
   }
   //Stealth (TalEth)
   if (runeBox[7].checked && runeBox[5].checked) {
     word[6].classList.remove("hidden");
+    runeComb[6].classList.remove("incomplete");
+    runeComb[6].classList.add("complete");
   } else {
     word[6].classList.add("hidden");
+    runeComb[6].classList.remove("complete");
+    runeComb[6].classList.add("incomplete");
   }
   //Steel (TirEl)
   if (runeBox[3].checked && runeBox[1].checked) {
     word[7].classList.remove("hidden");
+    runeComb[7].classList.remove("incomplete");
+    runeComb[7].classList.add("complete");
   } else {
     word[7].classList.add("hidden");
+    runeComb[7].classList.remove("complete");
+    runeComb[7].classList.add("incomplete");
   }
   //Strength (AmnTir)
   if (runeBox[11].checked && runeBox[3].checked) {
     word[8].classList.remove("hidden");
+    runeComb[8].classList.remove("incomplete");
+    runeComb[8].classList.add("complete");
   } else {
     word[8].classList.add("hidden");
+    runeComb[8].classList.remove("complete");
+    runeComb[8].classList.add("incomplete");
   }
   //White (DolIo)
   if (runeBox[14].checked && runeBox[16].checked) {
     word[9].classList.remove("hidden");
+    runeComb[9].classList.remove("incomplete");
+    runeComb[9].classList.add("complete");
   } else {
     word[9].classList.add("hidden");
+    runeComb[9].classList.remove("complete");
+    runeComb[9].classList.add("incomplete");
   }
   //Zephyr (OrtEth)
   if (runeBox[9].checked && runeBox[5].checked) {
     word[10].classList.remove("hidden");
+    runeComb[10].classList.remove("incomplete");
+    runeComb[10].classList.add("complete");
   } else {
     word[10].classList.add("hidden");
+    runeComb[10].classList.remove("complete");
+    runeComb[10].classList.add("incomplete");
   }
   //Prudence (MalTir)
   if (runeBox[23].checked && runeBox[3].checked) {
     word[11].classList.remove("hidden");
+    runeComb[11].classList.remove("incomplete");
+    runeComb[11].classList.add("complete");
   } else {
     word[11].classList.add("hidden");
+    runeComb[11].classList.remove("complete");
+    runeComb[11].classList.add("incomplete");
   }
   //Splendor (EthLum)
   if (runeBox[5].checked && runeBox[17].checked) {
     word[12].classList.remove("hidden");
+    runeComb[12].classList.remove("incomplete");
+    runeComb[12].classList.add("complete");
   } else {
     word[12].classList.add("hidden");
+    runeComb[12].classList.remove("complete");
+    runeComb[12].classList.add("incomplete");
   }
   //Ancient's Pledge (RalOrtTal)
   if (runeBox[8].checked && runeBox[9].checked && runeBox[7].checked) {
     word[13].classList.remove("hidden");
+    runeComb[13].classList.remove("incomplete");
+    runeComb[13].classList.add("complete");
   } else {
     word[13].classList.add("hidden");
+    runeComb[13].classList.remove("complete");
+    runeComb[13].classList.add("incomplete");
   }
   //Black	Thul	Io	Nef
   if (runeBox[10].checked && runeBox[16].checked && runeBox[4].checked) {
-    word[1].classList.remove("hidden");
+    word[14].classList.remove("hidden");
+    runeComb[14].classList.remove("incomplete");
+    runeComb[14].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[14].classList.add("hidden");
+    runeComb[14].classList.remove("complete");
+    runeComb[14].classList.add("incomplete");
   }
   //Fury	Jah	Gul	Eth	
   if (runeBox[31].checked && runeBox[25].checked && runeBox[5].checked) {
-    word[1].classList.remove("hidden");
+    word[15].classList.remove("hidden");
+    runeComb[15].classList.remove("incomplete");
+    runeComb[15].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[15].classList.add("hidden");
+    runeComb[15].classList.remove("complete");
+    runeComb[15].classList.add("incomplete");
   }
   //King's Grace	Amn	Ral	Thul	
   if (runeBox[11].checked && runeBox[8].checked && runeBox[10].checked) {
-    word[1].classList.remove("hidden");
+    word[16].classList.remove("hidden");
+    runeComb[16].classList.remove("incomplete");
+    runeComb[16].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[16].classList.add("hidden");
+    runeComb[16].classList.remove("complete");
+    runeComb[16].classList.add("incomplete");
   }
   //Lionheart	Hel	Lum	Fal
   if (runeBox[15].checked && runeBox[17].checked && runeBox[19].checked) {
-    word[1].classList.remove("hidden");
+    word[17].classList.remove("hidden");
+    runeComb[17].classList.remove("incomplete");
+    runeComb[17].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[17].classList.add("hidden");
+    runeComb[17].classList.remove("complete");
+    runeComb[17].classList.add("incomplete");
   }
   //Malice	Ith	El	Eth
   if (runeBox[6].checked && runeBox[1].checked && runeBox[5].checked) {
-    word[1].classList.remove("hidden");
+    word[18].classList.remove("hidden");
+    runeComb[18].classList.remove("incomplete");
+    runeComb[18].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[18].classList.add("hidden");
+    runeComb[18].classList.remove("complete");
+    runeComb[18].classList.add("incomplete");
   }
   //Melody	Shael	Ko	Nef	
   if (runeBox[13].checked && runeBox[18].checked && runeBox[4].checked) {
-    word[1].classList.remove("hidden");
+    word[19].classList.remove("hidden");
+    runeComb[19].classList.remove("incomplete");
+    runeComb[19].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[19].classList.add("hidden");
+    runeComb[19].classList.remove("complete");
+    runeComb[19].classList.add("incomplete");
   }
   //Radiance	Nef	Sol	Ith
   if (runeBox[4].checked && runeBox[12].checked && runeBox[6].checked) {
-    word[1].classList.remove("hidden");
+    word[20].classList.remove("hidden");
+    runeComb[20].classList.remove("incomplete");
+    runeComb[20].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[20].classList.add("hidden");
+    runeComb[20].classList.remove("complete");
+    runeComb[20].classList.add("incomplete");
   }
   //Venom	Tal	Dol	Mal
   if (runeBox[7].checked && runeBox[14].checked && runeBox[23].checked) {
-    word[1].classList.remove("hidden");
+    word[21].classList.remove("hidden");
+    runeComb[21].classList.remove("incomplete");
+    runeComb[21].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[21].classList.add("hidden");
+    runeComb[21].classList.remove("complete");
+    runeComb[21].classList.add("incomplete");
   }
   //Wealth	Lem	Ko	Tir
   if (runeBox[20].checked && runeBox[18].checked && runeBox[3].checked) {
-    word[1].classList.remove("hidden");
+    word[22].classList.remove("hidden");
+    runeComb[22].classList.remove("incomplete");
+    runeComb[22].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[22].classList.add("hidden");
+    runeComb[22].classList.remove("complete");
+    runeComb[22].classList.add("incomplete");
   }
   //Chaos	Fal	Ohm	Um	
   if (runeBox[19].checked && runeBox[27].checked && runeBox[22].checked) {
-    word[1].classList.remove("hidden");
+    word[23].classList.remove("hidden");
+    runeComb[23].classList.remove("incomplete");
+    runeComb[23].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[23].classList.add("hidden");
+    runeComb[23].classList.remove("complete");
+    runeComb[23].classList.add("incomplete");
   }
   //Crescent Moon	Shael	Um	Tir	
   if (runeBox[13].checked && runeBox[22].checked && runeBox[3].checked) {
-    word[1].classList.remove("hidden");
+    word[24].classList.remove("hidden");
+    runeComb[24].classList.remove("incomplete");
+    runeComb[24].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[24].classList.add("hidden");
+    runeComb[24].classList.remove("complete");
+    runeComb[24].classList.add("incomplete");
   }
   //Delirium	Lem	Ist	Io
   if (runeBox[20].checked && runeBox[24].checked && runeBox[16].checked) {
-    word[1].classList.remove("hidden");
+    word[25].classList.remove("hidden");
+    runeComb[25].classList.remove("incomplete");
+    runeComb[25].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[25].classList.add("hidden");
+    runeComb[25].classList.remove("complete");
+    runeComb[25].classList.add("incomplete");
   }
   //Duress	Shael	Um	Thul
   if (runeBox[13].checked && runeBox[22].checked && runeBox[10].checked) {
-    word[1].classList.remove("hidden");
+    word[26].classList.remove("hidden");
+    runeComb[26].classList.remove("incomplete");
+    runeComb[26].classList.add("complete");
   } else {
-    word[1].classList.add("hidden");
+    word[26].classList.add("hidden");
+    runeComb[26].classList.remove("complete");
+    runeComb[26].classList.add("incomplete");
   }
   //Enigma	Jah	Ith	Ber
   if (runeBox[31].checked && runeBox[6].checked && runeBox[30].checked) {
-    word[2].classList.remove("hidden");
+    word[27].classList.remove("hidden");
+    runeComb[27].classList.remove("incomplete");
+    runeComb[27].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[27].classList.add("hidden");
+    runeComb[27].classList.remove("complete");
+    runeComb[27].classList.add("incomplete");
   }
   //Gloom	Fal	Um	Pul
   if (runeBox[19].checked && runeBox[22].checked && runeBox[21].checked) {
-    word[2].classList.remove("hidden");
+    word[28].classList.remove("hidden");
+    runeComb[28].classList.remove("incomplete");
+    runeComb[28].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[28].classList.add("hidden");
+    runeComb[28].classList.remove("complete");
+    runeComb[28].classList.add("incomplete");
   }
   //Sanctuary	Ko	Ko	Mal
   if (runeBox[18].checked && runeBox[18].checked && runeBox[23].checked) {
-    word[2].classList.remove("hidden");
+    word[29].classList.remove("hidden");
+    runeComb[29].classList.remove("incomplete");
+    runeComb[29].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[29].classList.add("hidden");
+    runeComb[29].classList.remove("complete");
+    runeComb[29].classList.add("incomplete");
   }
   //Wind	Sur	Sur	El
   if (runeBox[29].checked && runeBox[29].checked && runeBox[1].checked) {
-    word[2].classList.remove("hidden");
+    word[30].classList.remove("hidden");
+    runeComb[30].classList.remove("incomplete");
+    runeComb[30].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[30].classList.add("hidden");
+    runeComb[30].classList.remove("complete");
+    runeComb[30].classList.add("incomplete");
   }
   //Dragon	Sur	Lo	Sol
   if (runeBox[29].checked && runeBox[28].checked && runeBox[12].checked) {
-    word[2].classList.remove("hidden");
+    word[31].classList.remove("hidden");
+    runeComb[31].classList.remove("incomplete");
+    runeComb[31].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[31].classList.add("hidden");
+    runeComb[31].classList.remove("complete");
+    runeComb[31].classList.add("incomplete");
   }
   //Dream	Io	Jah	Pul
   if (runeBox[16].checked && runeBox[31].checked && runeBox[21].checked) {
-    word[2].classList.remove("hidden");
+    word[32].classList.remove("hidden");
+    runeComb[32].classList.remove("incomplete");
+    runeComb[32].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[32].classList.add("hidden");
+    runeComb[32].classList.remove("complete");
+    runeComb[32].classList.add("incomplete");
   }
   //Edge	Tir	Tal	Amn
   if (runeBox[3].checked && runeBox[7].checked && runeBox[11].checked) {
-    word[2].classList.remove("hidden");
+    word[33].classList.remove("hidden");
+    runeComb[33].classList.remove("incomplete");
+    runeComb[33].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[33].classList.add("hidden");
+    runeComb[33].classList.remove("complete");
+    runeComb[33].classList.add("incomplete");
   }
   //Lawbringer	Amn	Lem	Ko
   if (runeBox[11].checked && runeBox[20].checked && runeBox[18].checked) {
-    word[2].classList.remove("hidden");
+    word[34].classList.remove("hidden");
+    runeComb[34].classList.remove("incomplete");
+    runeComb[34].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[34].classList.add("hidden");
+    runeComb[34].classList.remove("complete");
+    runeComb[34].classList.add("incomplete");
   }
   //Bone	Sol	Um	Um	
   if (runeBox[12].checked && runeBox[22].checked && runeBox[22].checked) {
-    word[2].classList.remove("hidden");
+    word[35].classList.remove("hidden");
+    runeComb[35].classList.remove("incomplete");
+    runeComb[35].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[35].classList.add("hidden");
+    runeComb[35].classList.remove("complete");
+    runeComb[35].classList.add("incomplete");
   }
   //Enlightenment	Pul	Ral	Sol	
   if (runeBox[21].checked && runeBox[8].checked && runeBox[12].checked) {
-    word[2].classList.remove("hidden");
+    word[36].classList.remove("hidden");
+    runeComb[36].classList.remove("incomplete");
+    runeComb[36].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[36].classList.add("hidden");
+    runeComb[36].classList.remove("complete");
+    runeComb[36].classList.add("incomplete");
   }
   //Myth	Hel	Amn	Nef	
   if (runeBox[15].checked && runeBox[11].checked && runeBox[4].checked) {
-    word[2].classList.remove("hidden");
+    word[37].classList.remove("hidden");
+    runeComb[37].classList.remove("incomplete");
+    runeComb[37].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[37].classList.add("hidden");
+    runeComb[37].classList.remove("complete");
+    runeComb[37].classList.add("incomplete");
   }
   //Peace	Shael	Thul	Amn
   if (runeBox[13].checked && runeBox[10].checked && runeBox[11].checked) {
-    word[2].classList.remove("hidden");
+    word[38].classList.remove("hidden");
+    runeComb[38].classList.remove("incomplete");
+    runeComb[38].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[38].classList.add("hidden");
+    runeComb[38].classList.remove("complete");
+    runeComb[38].classList.add("incomplete");
   }
   //Principle	Ral	Pul	Eld	
   if (runeBox[8].checked && runeBox[21].checked && runeBox[2].checked) {
-    word[2].classList.remove("hidden");
+    word[39].classList.remove("hidden");
+    runeComb[39].classList.remove("incomplete");
+    runeComb[39].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[39].classList.add("hidden");
+    runeComb[39].classList.remove("complete");
+    runeComb[39].classList.add("incomplete");
   }
   //Rain	Ort	Mal	Ith	
   if (runeBox[9].checked && runeBox[23].checked && runeBox[6].checked) {
-    word[2].classList.remove("hidden");
+    word[40].classList.remove("hidden");
+    runeComb[40].classList.remove("incomplete");
+    runeComb[40].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[40].classList.add("hidden");
+    runeComb[40].classList.remove("complete");
+    runeComb[40].classList.add("incomplete");
   }
   //Treachery	Shael	Thul	Lem	
   if (runeBox[13].checked && runeBox[10].checked && runeBox[20].checked) {
-    word[2].classList.remove("hidden");
+    word[41].classList.remove("hidden");
+    runeComb[41].classList.remove("incomplete");
+    runeComb[41].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[41].classList.add("hidden");
+    runeComb[41].classList.remove("complete");
+    runeComb[41].classList.add("incomplete");
   }
   //Pattern	Tal	Ort	Tir	
   if (runeBox[7].checked && runeBox[9].checked && runeBox[3].checked) {
-    word[2].classList.remove("hidden");
+    word[42].classList.remove("hidden");
+    runeComb[42].classList.remove("incomplete");
+    runeComb[42].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[42].classList.add("hidden");
+    runeComb[42].classList.remove("complete");
+    runeComb[42].classList.add("incomplete");
   }
   //Plague	Cham	Fal	Um	
   if (runeBox[32].checked && runeBox[19].checked && runeBox[22].checked) {
-    word[2].classList.remove("hidden");
+    word[43].classList.remove("hidden");
+    runeComb[43].classList.remove("incomplete");
+    runeComb[43].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[43].classList.add("hidden");
+    runeComb[43].classList.remove("complete");
+    runeComb[43].classList.add("incomplete");
   }
   //Holy Thunder	Eth	Ral	Ort	Tal
   if (runeBox[5].checked && runeBox[8].checked && runeBox[9].checked && runeBox[7].checked) {
-    word[2].classList.remove("hidden");
+    word[44].classList.remove("hidden");
+    runeComb[44].classList.remove("incomplete");
+    runeComb[44].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[44].classList.add("hidden");
+    runeComb[44].classList.remove("complete");
+    runeComb[44].classList.add("incomplete");
   }
   //Memory	Lum	Io	Sol	Eth
   if (runeBox[17].checked && runeBox[16].checked && runeBox[12].checked && runeBox[5].checked) {
-    word[2].classList.remove("hidden");
+    word[45].classList.remove("hidden");
+    runeComb[45].classList.remove("incomplete");
+    runeComb[45].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[45].classList.add("hidden");
+    runeComb[45].classList.remove("complete");
+    runeComb[45].classList.add("incomplete");
   }
   //Bramble	Ral	Ohm	Sur	Eth	
   if (runeBox[8].checked && runeBox[27].checked && runeBox[29].checked && runeBox[5].checked) {
-    word[2].classList.remove("hidden");
+    word[46].classList.remove("hidden");
+    runeComb[46].classList.remove("incomplete");
+    runeComb[46].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[46].classList.add("hidden");
+    runeComb[46].classList.remove("complete");
+    runeComb[46].classList.add("incomplete");
   }
   //Chains of Honor	Dol	Um	Ber	Ist	
   if (runeBox[14].checked && runeBox[22].checked && runeBox[30].checked && runeBox[24].checked) {
-    word[2].classList.remove("hidden");
+    word[47].classList.remove("hidden");
+    runeComb[47].classList.remove("incomplete");
+    runeComb[47].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[47].classList.add("hidden");
+    runeComb[47].classList.remove("complete");
+    runeComb[47].classList.add("incomplete");
   }
   //Exile	Vex	Ohm	Ist	Dol	
   if (runeBox[26].checked && runeBox[27].checked && runeBox[24].checked && runeBox[14].checked) {
-    word[2].classList.remove("hidden");
+    word[48].classList.remove("hidden");
+    runeComb[48].classList.remove("incomplete");
+    runeComb[48].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[48].classList.add("hidden");
+    runeComb[48].classList.remove("complete");
+    runeComb[48].classList.add("incomplete");
   }
   //Famine	Fal	Ohm	Ort	Jah	
   if (runeBox[19].checked && runeBox[27].checked && runeBox[9].checked && runeBox[31].checked) {
-    word[2].classList.remove("hidden");
+    word[49].classList.remove("hidden");
+    runeComb[49].classList.remove("incomplete");
+    runeComb[49].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[49].classList.add("hidden");
+    runeComb[49].classList.remove("complete");
+    runeComb[49].classList.add("incomplete");
   }
   //Hand of Justice	Sur	Cham	Amn	Lo
   if (runeBox[29].checked && runeBox[32].checked && runeBox[11].checked && runeBox[28].checked) {
-    word[2].classList.remove("hidden");
+    word[50].classList.remove("hidden");
+    runeComb[50].classList.remove("incomplete");
+    runeComb[50].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[50].classList.add("hidden");
+    runeComb[50].classList.remove("complete");
+    runeComb[50].classList.add("incomplete");
   }
   //Heart of the Oak	Ko	Vex	Pul	Thul	 
   if (runeBox[18].checked && runeBox[26].checked && runeBox[21].checked && runeBox[10].checked) {
-    word[2].classList.remove("hidden");
+    word[51].classList.remove("hidden");
+    runeComb[51].classList.remove("incomplete");
+    runeComb[51].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[51].classList.add("hidden");
+    runeComb[51].classList.remove("complete");
+    runeComb[51].classList.add("incomplete");
   }
   //Kingslayer	Mal	Um	Gul	Fal	
   if (runeBox[23].checked && runeBox[22].checked && runeBox[25].checked && runeBox[19].checked) {
-    word[2].classList.remove("hidden");
+    word[52].classList.remove("hidden");
+    runeComb[52].classList.remove("incomplete");
+    runeComb[52].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[52].classList.add("hidden");
+    runeComb[52].classList.remove("complete");
+    runeComb[52].classList.add("incomplete");
   }
   //Passion	Dol	Ort	Eld	Lem	 
   if (runeBox[14].checked && runeBox[9].checked && runeBox[2].checked && runeBox[20].checked) {
-    word[2].classList.remove("hidden");
+    word[53].classList.remove("hidden");
+    runeComb[53].classList.remove("incomplete");
+    runeComb[53].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[53].classList.add("hidden");
+    runeComb[53].classList.remove("complete");
+    runeComb[53].classList.add("incomplete");
   }
   //Stone	Shael	Um	Pul	Lum	
   if (runeBox[13].checked && runeBox[22].checked && runeBox[21].checked && runeBox[17].checked) {
-    word[2].classList.remove("hidden");
+    word[54].classList.remove("hidden");
+    runeComb[54].classList.remove("incomplete");
+    runeComb[54].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[54].classList.add("hidden");
+    runeComb[54].classList.remove("complete");
+    runeComb[54].classList.add("incomplete");
   }
   //Brand	Jah	Lo	Mal	Gul	
   if (runeBox[31].checked && runeBox[28].checked && runeBox[23].checked && runeBox[25].checked) {
-    word[2].classList.remove("hidden");
+    word[55].classList.remove("hidden");
+    runeComb[55].classList.remove("incomplete");
+    runeComb[55].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[55].classList.add("hidden");
+    runeComb[55].classList.remove("complete");
+    runeComb[55].classList.add("incomplete");
   }
   //Faith	Ohm	Jah	Lem	Eld
   if (runeBox[27].checked && runeBox[31].checked && runeBox[20].checked && runeBox[2].checked) {
-    word[2].classList.remove("hidden");
+    word[56].classList.remove("hidden");
+    runeComb[56].classList.remove("incomplete");
+    runeComb[56].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[56].classList.add("hidden");
+    runeComb[56].classList.remove("complete");
+    runeComb[56].classList.add("incomplete");
   }
   //Fortitude	El	Sol	Dol	Lo	 	
   if (runeBox[1].checked && runeBox[12].checked && runeBox[14].checked && runeBox[28].checked) {
-    word[2].classList.remove("hidden");
+    word[57].classList.remove("hidden");
+    runeComb[57].classList.remove("incomplete");
+    runeComb[57].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[57].classList.add("hidden");
+    runeComb[57].classList.remove("complete");
+    runeComb[57].classList.add("incomplete");
   }
   //Harmony	Tir	Ith	Sol	Ko
   if (runeBox[3].checked && runeBox[6].checked && runeBox[12].checked && runeBox[18].checked) {
-    word[2].classList.remove("hidden");
+    word[58].classList.remove("hidden");
+    runeComb[58].classList.remove("incomplete");
+    runeComb[58].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[58].classList.add("hidden");
+    runeComb[58].classList.remove("complete");
+    runeComb[58].classList.add("incomplete");
   }
   //Ice	Amn	Shael	Jah	Lo	
   if (runeBox[11].checked && runeBox[13].checked && runeBox[31].checked && runeBox[28].checked) {
-    word[2].classList.remove("hidden");
+    word[59].classList.remove("hidden");
+    runeComb[59].classList.remove("incomplete");
+    runeComb[59].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[59].classList.add("hidden");
+    runeComb[59].classList.remove("complete");
+    runeComb[59].classList.add("incomplete");
   }
   //Infinity	Ber	Mal	Ber	Ist	
   if (runeBox[30].checked && runeBox[23].checked && runeBox[30].checked && runeBox[24].checked) {
-    word[2].classList.remove("hidden");
+    word[60].classList.remove("hidden");
+    runeComb[60].classList.remove("incomplete");
+    runeComb[60].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[60].classList.add("hidden");
+    runeComb[60].classList.remove("complete");
+    runeComb[60].classList.add("incomplete");
   }
   //Insight	Ral	Tir	Tal	Sol	 
   if (runeBox[8].checked && runeBox[3].checked && runeBox[7].checked && runeBox[12].checked) {
-    word[2].classList.remove("hidden");
+    word[61].classList.remove("hidden");
+    runeComb[61].classList.remove("incomplete");
+    runeComb[61].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[61].classList.add("hidden");
+    runeComb[61].classList.remove("complete");
+    runeComb[61].classList.add("incomplete");
   }
   //Oath	Shael	Pul	Mal	Lum	 
   if (runeBox[13].checked && runeBox[21].checked && runeBox[23].checked && runeBox[17].checked) {
-    word[2].classList.remove("hidden");
+    word[62].classList.remove("hidden");
+    runeComb[62].classList.remove("incomplete");
+    runeComb[62].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[62].classList.add("hidden");
+    runeComb[62].classList.remove("complete");
+    runeComb[62].classList.add("incomplete");
   }
   //Phoenix	Vex	Vex	Lo	Jah	 
   if (runeBox[26].checked && runeBox[26].checked && runeBox[28].checked && runeBox[31].checked) {
-    word[2].classList.remove("hidden");
+    word[63].classList.remove("hidden");
+    runeComb[63].classList.remove("incomplete");
+    runeComb[63].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[63].classList.add("hidden");
+    runeComb[63].classList.remove("complete");
+    runeComb[63].classList.add("incomplete");
   }
   //Pride	Cham	Sur	Io	Lo	 
   if (runeBox[32].checked && runeBox[29].checked && runeBox[16].checked && runeBox[28].checked) {
-    word[2].classList.remove("hidden");
+    word[64].classList.remove("hidden");
+    runeComb[64].classList.remove("incomplete");
+    runeComb[64].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[64].classList.add("hidden");
+    runeComb[64].classList.remove("complete");
+    runeComb[64].classList.add("incomplete");
   }
   //Rift	Hel	Ko	Lem	Gul	
   if (runeBox[15].checked && runeBox[18].checked && runeBox[20].checked && runeBox[25].checked) {
-    word[2].classList.remove("hidden");
+    word[65].classList.remove("hidden");
+    runeComb[65].classList.remove("incomplete");
+    runeComb[65].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[65].classList.add("hidden");
+    runeComb[65].classList.remove("complete");
+    runeComb[65].classList.add("incomplete");
   }
   //Spirit	Tal	Thul	Ort	Amn	
   if (runeBox[7].checked && runeBox[10].checked && runeBox[9].checked && runeBox[11].checked) {
-    word[2].classList.remove("hidden");
+    word[66].classList.remove("hidden");
+    runeComb[66].classList.remove("incomplete");
+    runeComb[66].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[66].classList.add("hidden");
+    runeComb[66].classList.remove("complete");
+    runeComb[66].classList.add("incomplete");
   }
   //Voice of Reason	Lem	Ko	El	Eld	
   if (runeBox[20].checked && runeBox[18].checked && runeBox[1].checked && runeBox[2].checked) {
-    word[2].classList.remove("hidden");
+    word[67].classList.remove("hidden");
+    runeComb[67].classList.remove("incomplete");
+    runeComb[67].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[67].classList.add("hidden");
+    runeComb[67].classList.remove("complete");
+    runeComb[67].classList.add("incomplete");
   }
   //Wrath	Pul	Lum	Ber	Mal	 
   if (runeBox[21].checked && runeBox[17].checked && runeBox[30].checked && runeBox[23].checked) {
-    word[2].classList.remove("hidden");
+    word[68].classList.remove("hidden");
+    runeComb[68].classList.remove("incomplete");
+    runeComb[68].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[68].classList.add("hidden");
+    runeComb[68].classList.remove("complete");
+    runeComb[68].classList.add("incomplete");
   }
   //Honor	Amn	El	Ith	Tir	Sol	
   if (runeBox[11].checked && runeBox[1].checked && runeBox[6].checked && runeBox[3].checked && runeBox[12].checked) {
-    word[2].classList.remove("hidden");
+    word[69].classList.remove("hidden");
+    runeComb[69].classList.remove("incomplete");
+    runeComb[69].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[69].classList.add("hidden");
+    runeComb[69].classList.remove("complete");
+    runeComb[69].classList.add("incomplete");
   }
   //Beast	Ber	Tir	Um	Mal	Lum	
   if (runeBox[30].checked && runeBox[3].checked && runeBox[22].checked && runeBox[23].checked && runeBox[17].checked) {
-    word[2].classList.remove("hidden");
+    word[70].classList.remove("hidden");
+    runeComb[70].classList.remove("incomplete");
+    runeComb[70].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[70].classList.add("hidden");
+    runeComb[70].classList.remove("complete");
+    runeComb[70].classList.add("incomplete");
   }
   //Call To Arms	Amn	Ral	Mal	Ist	Ohm	
   if (runeBox[11].checked && runeBox[8].checked && runeBox[23].checked && runeBox[24].checked && runeBox[27].checked) {
-    word[2].classList.remove("hidden");
+    word[71].classList.remove("hidden");
+    runeComb[71].classList.remove("incomplete");
+    runeComb[71].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[71].classList.add("hidden");
+    runeComb[71].classList.remove("complete");
+    runeComb[71].classList.add("incomplete");
   }
   //Doom	Hel	Ohm	Um	Lo	Cham	
   if (runeBox[15].checked && runeBox[27].checked && runeBox[22].checked && runeBox[28].checked && runeBox[32].checked) {
-    word[2].classList.remove("hidden");
+    word[72].classList.remove("hidden");
+    runeComb[72].classList.remove("incomplete");
+    runeComb[72].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[72].classList.add("hidden");
+    runeComb[72].classList.remove("complete");
+    runeComb[72].classList.add("incomplete");
   }
   //Eternity	Amn	Ber	Ist	Sol	Sur	 
   if (runeBox[11].checked && runeBox[30].checked && runeBox[24].checked && runeBox[12].checked && runeBox[29].checked) {
-    word[2].classList.remove("hidden");
+    word[73].classList.remove("hidden");
+    runeComb[73].classList.remove("incomplete");
+    runeComb[73].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[73].classList.add("hidden");
+    runeComb[73].classList.remove("complete");
+    runeComb[73].classList.add("incomplete");
   }
   //Death	Hel	El	Vex	Ort	Gul	 	
   if (runeBox[15].checked && runeBox[1].checked && runeBox[26].checked && runeBox[9].checked && runeBox[25].checked) {
-    word[2].classList.remove("hidden");
+    word[74].classList.remove("hidden");
+    runeComb[74].classList.remove("incomplete");
+    runeComb[74].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[74].classList.add("hidden");
+    runeComb[74].classList.remove("complete");
+    runeComb[74].classList.add("incomplete");
   }
   //Destruction	Vex	Lo	Ber	Jah	Ko	
   if (runeBox[26].checked && runeBox[28].checked && runeBox[30].checked && runeBox[31].checked && runeBox[18].checked) {
-    word[2].classList.remove("hidden");
+    word[75].classList.remove("hidden");
+    runeComb[75].classList.remove("incomplete");
+    runeComb[75].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[75].classList.add("hidden");
+    runeComb[75].classList.remove("complete");
+    runeComb[75].classList.add("incomplete");
   }
   //Grief	Eth	Tir	Lo	Mal	Ral	
   if (runeBox[5].checked && runeBox[3].checked && runeBox[28].checked && runeBox[23].checked && runeBox[8].checked) {
-    word[2].classList.remove("hidden");
+    word[76].classList.remove("hidden");
+    runeComb[76].classList.remove("incomplete");
+    runeComb[76].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[76].classList.add("hidden");
+    runeComb[76].classList.remove("complete");
+    runeComb[76].classList.add("incomplete");
   }
   //Obedience	Hel	Ko	Thul	Eth	Fal
   if (runeBox[15].checked && runeBox[18].checked && runeBox[10].checked && runeBox[5].checked && runeBox[19].checked) {
-    word[2].classList.remove("hidden");
+    word[77].classList.remove("hidden");
+    runeComb[77].classList.remove("incomplete");
+    runeComb[77].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[77].classList.add("hidden");
+    runeComb[77].classList.remove("complete");
+    runeComb[77].classList.add("incomplete");
   }
   //Silence	Dol	Eld	Hel	Ist	Tir	Vex	
   if (runeBox[14].checked && runeBox[2].checked && runeBox[15].checked && runeBox[24].checked && runeBox[3].checked && runeBox[26].checked) {
-    word[2].classList.remove("hidden");
+    word[78].classList.remove("hidden");
+    runeComb[78].classList.remove("incomplete");
+    runeComb[78].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[78].classList.add("hidden");
+    runeComb[78].classList.remove("complete");
+    runeComb[78].classList.add("incomplete");
   }
   //Breath of the Dying	Vex	Hel	El	Eld	Zod	Eth	
   if (runeBox[26].checked && runeBox[15].checked && runeBox[1].checked && runeBox[2].checked && runeBox[33].checked && runeBox[5].checked) {
-    word[2].classList.remove("hidden");
+    word[79].classList.remove("hidden");
+    runeComb[79].classList.remove("incomplete");
+    runeComb[79].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[79].classList.add("hidden");
+    runeComb[79].classList.remove("complete");
+    runeComb[79].classList.add("incomplete");
   }
   //Last Wish	Jah	Mal	Jah	Sur	Jah	Ber
   if (runeBox[31].checked && runeBox[23].checked && runeBox[31].checked && runeBox[29].checked && runeBox[31].checked && runeBox[30].checked) {
-    word[2].classList.remove("hidden");
+    word[80].classList.remove("hidden");
+    runeComb[80].classList.remove("incomplete");
+    runeComb[80].classList.add("complete");
   } else {
-    word[2].classList.add("hidden");
+    word[80].classList.add("hidden");
+    runeComb[80].classList.remove("complete");
+    runeComb[80].classList.add("incomplete");
   }
+  //Unending Will	Cham Ohm
+  if (runeBox[32].checked && runeBox[27].checked) {
+    word[81].classList.remove("hidden");
+    runeComb[81].classList.remove("incomplete");
+    runeComb[81].classList.add("complete");
+  } else {
+    word[81].classList.add("hidden");
+    runeComb[81].classList.remove("complete");
+    runeComb[81].classList.add("incomplete");
+  }
+  //Zenith	Cham Zod Ort Zhul Ral
+  if (runeBox[32].checked && runeBox[33].checked && runeBox[9].checked && runeBox[10].checked && runeBox[8].checked) {
+    word[82].classList.remove("hidden");
+    runeComb[82].classList.remove("incomplete");
+    runeComb[82].classList.add("complete");
+  } else {
+    word[82].classList.add("hidden");
+    runeComb[82].classList.remove("complete");
+    runeComb[82].classList.add("incomplete");
+  }  
 }
 runewordShow();
 document.addEventListener("click", runewordShow);
@@ -2238,17 +2577,14 @@ function runeHighlight(){
 document.addEventListener("click",runeHighlight);
 
 //Runeword Description Popup on Cursor (or runeword name)
-const runeComb = document.querySelectorAll(".runeComb");
 const wordDesc = document.querySelectorAll(".wordDesc");
 const wordPopup = document.querySelector("#wordPopup");
-
 runeComb.forEach(function(item){
   let runeName = item.querySelector("th");
   runeName.addEventListener('mouseover', function(){
     const r = /\d+/;
     const num = item.id.match(r)[0];
     let description = wordDesc[num].innerHTML.replace(/(?:\r\n|\r|\n)/g, '<br>');  
-    description.
     wordPopup.innerHTML = description;
     wordPopup.classList.remove("invisible");
     let offsetTop = this.offsetTop;
@@ -2262,3 +2598,39 @@ runeComb.forEach(function(item){
     wordPopup.classList.add("invisible");
   })
 })
+
+//Runeword sorting script
+// [n] vs [n+1] , complete > incomplete
+// foreach is not good for interupting loop
+// complete thing sorting
+function sortingComp(){
+  let tableRuneComb;
+  let switching = true;
+  let shouldSwitch;
+  let i;
+  while (switching){
+    tableRuneComb = document.querySelectorAll(".runeComb");
+    switching = false;
+    for (i=1; i < tableRuneComb.length - 1; i++){
+      shouldSwitch = false;
+      let currentRow = tableRuneComb[i].classList.contains('complete');
+      let nextRow = tableRuneComb[i+1].classList.contains('complete');
+      if( !currentRow && nextRow ){ //currentRow = incomplete, nextRow = complete
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      tableRuneComb[i].parentNode.insertBefore(tableRuneComb[i + 1], tableRuneComb[i]);
+      switching = true;
+    }
+  }
+}
+// sorting between group by Id
+function sortingByIdComp(){
+
+}
+function sortingByIdIncomp(){
+
+}
+document.addEventListener("click",sortingComp);
