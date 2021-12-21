@@ -4,6 +4,13 @@ const runeComb = document.querySelectorAll(".runeComb");
 //Clickable Rune Array
 const runeContainer = document.querySelector(".runeContainer");
 let runeDiv = '';
+runeDiv += 
+`
+<div class="rune">
+  <input type="checkbox" id="rune0" class="runeBox" />
+  <img src="img/rune0.png" id="runeImg0" class="runeImg hidden" />
+ </div>
+ `;
 for (let i = 1; i < 34; i++) {
   runeDiv += 
   `
@@ -1709,7 +1716,7 @@ for (let i = 0; i < 83; i++) {
 }
 wordDetail.innerHTML = wordDiv;
 
-//Rune click checkbox ccript
+//Rune click checkbox script
 const runeImg = document.querySelectorAll(".runeImg");
 const runeBox = document.querySelectorAll("input.runeBox");
 const word = document.querySelectorAll(".word");
@@ -2550,15 +2557,25 @@ function runewordShow() {
     runeComb[82].classList.add("incomplete");
   }  
 }
-runewordShow();
 document.addEventListener("click", runewordShow);
 
-function runeHighlight(){
-  const runes = [];
-  for(let i = 0; i < runeBox.length; i++){
-    runes.push(document.querySelectorAll('.runeImgSmall'+i));
+//rune highlight script 
+const runes = [];
+for(let i = 0; i < runeBox.length; i++){
+  runes.push(document.querySelectorAll('.runeImgSmall'+i));
+}
+//check longest array
+let max = -Infinity;
+let index = -1;
+runes.forEach(function(item, i){
+  if (item.length > max) {
+    max = item.length;
+    index = i;
   }
-  for (let i = 0; i < 6; i++) { //the number of runeslot = 6
+})
+//highlight function
+function runeHighlight(){
+  for (let i = 0; i < max; i++) { //the number of runeslot = 6
     for (let j = 0; j < runeBox.length; j++) { //the number of runes
       const runeC = runes[j][i];
       if (runeC == null) {
@@ -2573,7 +2590,6 @@ function runeHighlight(){
     }
   }
 }
-
 document.addEventListener("click",runeHighlight);
 
 //Runeword Description Popup on Cursor (or runeword name)
@@ -2589,7 +2605,7 @@ runeComb.forEach(function(item){
     wordPopup.classList.remove("invisible");
     let offsetTop = this.offsetTop;
     let offsetLeft = this.offsetLeft;
-    wordPopup.style.top = offsetTop;
+    wordPopup.style.top = offsetTop + 50;
     wordPopup.style.left = offsetLeft + 150;
   })
   item.addEventListener('mouseout',function(){
@@ -2602,8 +2618,9 @@ runeComb.forEach(function(item){
 //Runeword sorting script
 // [n] vs [n+1] , complete > incomplete
 // foreach is not good for interupting loop
+
 // complete thing sorting
-function sortingComp(){
+function sortingIsComp(){
   let tableRuneComb;
   let switching = true;
   let shouldSwitch;
@@ -2628,9 +2645,64 @@ function sortingComp(){
 }
 // sorting between group by Id
 function sortingByIdComp(){
-
+  let tableComplete;
+  let switching = true;
+  let shouldSwitch;
+  let i;
+  while (switching){
+    tableComplete = document.querySelectorAll(".complete");
+    switching = false;
+    for (i=0; i < tableComplete.length - 1 ; i++){
+      shouldSwitch = false;
+      const r = /\d+/;
+      let currentNum = parseInt(tableComplete[i].id.match(r)[0]);  
+      let nextNum = parseInt(tableComplete[i+1].id.match(r)[0]);
+      if(currentNum > nextNum){
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch){
+      tableComplete[i].parentNode.insertBefore(tableComplete[i + 1], tableComplete[i]);
+      switching = true;
+    }
+  }
 }
 function sortingByIdIncomp(){
-
+  let tableIncomplete;
+  let switching = true;
+  let shouldSwitch;
+  let i;
+  while (switching){
+    tableIncomplete = document.querySelectorAll(".incomplete");
+    switching = false;
+    for (i=0; i < tableIncomplete.length - 1 ; i++){
+      shouldSwitch = false;
+      const r = /\d+/g;
+      let currentNum = parseInt(tableIncomplete[i].id.match(r)[0]);  
+      let nextNum = parseInt(tableIncomplete[i+1].id.match(r)[0]);
+      if(currentNum > nextNum){
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch){
+      tableIncomplete[i].parentNode.insertBefore(tableIncomplete[i + 1], tableIncomplete[i]);
+      switching = true;
+    }
+  }
 }
-document.addEventListener("click",sortingComp);
+//count highlight runes and sort
+function sortingAlmostComp(){
+  tablePartialHighlight = document.querySelectorAll(".runeComb");
+}
+function sorting(){
+  sortingIsComp();
+  sortingByIdComp();
+  sortingByIdIncomp();
+  sortingAlmostComp();
+}
+document.addEventListener("click",sorting);
+
+//page loading funcion
+runewordShow();
