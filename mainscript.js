@@ -38,6 +38,7 @@ scrollCheck = function(){
   };
 };
 document.addEventListener("scroll", scrollCheck);
+scrollCheck();
 
 //Resize react 
 const wordContainer = document.getElementById("wordContainer");
@@ -1719,7 +1720,6 @@ wordDetail.innerHTML = wordDiv;
 //Rune click checkbox script
 const runeImg = document.querySelectorAll(".runeImg");
 const runeBox = document.querySelectorAll("input.runeBox");
-const word = document.querySelectorAll(".word");
 const runeImgSmall = document.querySelectorAll(".runeImgSmall");
 
 runeImg.forEach(function(item) {
@@ -1731,7 +1731,29 @@ runeImg.forEach(function(item) {
   });
 });
 
+//saving rune list when you click (localStorage)
+let savedRunelist = [];
+function saveRune(){
+  savedRunelist = [];
+  const savedRuneBox = document.querySelectorAll(".runeBox");
+  savedRuneBox.forEach((item) => savedRunelist.push(item.checked));
+  localStorage.setItem("list", JSON.stringify(savedRunelist));
+}
+runeContainer.addEventListener('click', saveRune);
+
+//loading rune list when page loaded
+savedRunelist = JSON.parse(localStorage.getItem('list'));
+if (savedRunelist !== null ){
+  for (i=0;i<savedRunelist.length;i++){
+    if(savedRunelist[i]){
+      runeBox[i].checked = true;
+      runeImg[i].classList.add("selected");
+    }
+  }
+}
+
 //Runeword combination and show script
+const word = document.querySelectorAll(".word");
 const runeTable = document.querySelector("#runeTable");
 const runeTableBody = runeTable.querySelector("tbody");
 
@@ -2558,6 +2580,7 @@ function runewordShow() {
   }  
 }
 document.addEventListener("click", runewordShow);
+runewordShow();
 
 //rune highlight script 
 const runes = [];
@@ -2591,6 +2614,7 @@ function runeHighlight(){
   }
 }
 document.addEventListener("click",runeHighlight);
+runeHighlight();
 
 //Runeword Description Popup on Cursor (or runeword name)
 const wordDesc = document.querySelectorAll(".wordDesc");
@@ -2703,6 +2727,6 @@ function sorting(){
   sortingAlmostComp();
 }
 document.addEventListener("click",sorting);
+sorting();
 
-//page loading funcion
-runewordShow();
+
