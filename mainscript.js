@@ -1737,12 +1737,12 @@ function saveRune(){
   savedRunelist = [];
   const savedRuneBox = document.querySelectorAll(".runeBox");
   savedRuneBox.forEach((item) => savedRunelist.push(item.checked));
-  localStorage.setItem("list", JSON.stringify(savedRunelist));
+  localStorage.setItem("pd2_rune_list", JSON.stringify(savedRunelist));
 }
 runeContainer.addEventListener('click', saveRune);
 
 //loading rune list when page loaded
-savedRunelist = JSON.parse(localStorage.getItem('list'));
+savedRunelist = JSON.parse(localStorage.getItem('pd2_rune_list'));
 if (savedRunelist !== null ){
   for (i=0;i<savedRunelist.length;i++){
     if(savedRunelist[i]){
@@ -2718,7 +2718,7 @@ function sortingByIdIncomp(){
 }
 //count highlight runes and sort
 function sortingAlmostComp(){
-  tablePartialHighlight = document.querySelectorAll(".runeComb");
+  let tablePartialHighlight = document.querySelectorAll(".runeComb");
 }
 function sorting(){
   sortingIsComp();
@@ -2728,5 +2728,3 @@ function sorting(){
 }
 document.addEventListener("click",sorting);
 sorting();
-
-
