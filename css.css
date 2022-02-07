@@ -1,0 +1,87 @@
+#mainframe{
+    display: flex;
+    place-content: center;
+}
+body { 
+    background-color: black;
+    color: white;
+}
+.rune {
+    position:relative;
+    display:inline-block;
+}
+.runeContainer{
+    width: 80%;
+    left: 10%;
+    margin:0;
+    background-color: #222222;
+    position: fixed;
+    top: 0;
+    transition: 0.5s;
+    z-index: 99;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+}
+.runeImg {
+    width: 60px;
+    height: 60px;
+    opacity: 0.3;
+}
+.runeImgSmall{
+    width:36px;
+    height:36px;
+    opacity: 0.3;
+}
+#runeTable tr td {
+    width:50px;
+}
+.runeBox {
+    display: none;
+}
+#wordPopup{
+    position: absolute;
+    padding: 0px 20px 22px 20px;
+    z-index: 10;
+    background-color : #222222;
+    text-align: center;
+    border-radius: 20px 20px 20px 20px;
+}
+.invisible{
+    visibility: hidden;
+}
+.highlight{
+    opacity: 1;
+}
+.vanish {
+    transform: translateY(-100%);
+}
+h3.wordTitle{
+    width: 200px;
+}
+.wordDescContainer{
+    position: relative;
+    top: -10px;
+    left: 50px;
+    z-index: 10;
+    background-color: aquamarine;
+}
+.wordContainer {
+    position: absolute;
+}
+.wordTitle {
+    display:none;
+}
+.selected {
+    opacity: 1;
+}
+.hidden {
+    display:none;
+}
+td, th{
+    text-align: center;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+th:hover{
+    background-color:white;
+} 
