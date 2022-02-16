@@ -2,6 +2,24 @@
     display: flex;
     place-content: center;
 }
+#overlay {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    color: white;
+    font-size: 4em;
+    text-align: center;
+    padding: 5px 20px 10px 20px;
+    background-color:rgba(42, 129, 163, 0.3);
+    border-radius: 20px;    
+}
+.fadein {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
 body { 
     background-color: black;
     color: white;
@@ -85,21 +103,3 @@ td, th{
 th:hover{
     background-color:white;
 } 
-#overlay {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    z-index: 2;
-    color: white;
-    font-size: 4em;
-    text-align: center;
-    padding: 5px 20px 10px 20px;
-    background-color:rgba(42, 129, 163, 0.3);
-    border-radius: 20px;    
-}
-.fadein {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s linear;
-}
